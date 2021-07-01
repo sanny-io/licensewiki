@@ -7,7 +7,7 @@ export default function Footer() {
         <span>No information on this site is legal advice.</span>
         <nav>
           <ul className="flex flex-row gap-x-6">
-            <li><a href="https://github.com/licensewiki/licensewiki">GitHub</a></li>
+            <li><a href={process.env.NEXT_PUBLIC_REPO_URL}>GitHub</a></li>
             <li><a href="https://sanny.io">sanny.io</a></li>
           </ul>
         </nav>
