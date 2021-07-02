@@ -1,6 +1,7 @@
 import React from 'react'
 import HomeLayout from '.'
 import Conditions from '../components/Conditions'
+import Head from 'next/head'
 import { getAllLicenses, getLicenseBySlug } from '../services/license'
 import { markdownToHtml } from '../services/markdown'
 import Markdown from '../components/Markdown'
@@ -8,6 +9,10 @@ import Markdown from '../components/Markdown'
 export default function License({ licenses, name, may, mayNot, must, children, source, slug }) {
   return (
     <HomeLayout licenses={licenses} defaultLicenseSearchText={slug}>
+      <Head>
+        <title>{name} - license.wiki</title>
+      </Head>
+
       <div className="container px-4 mx-auto">
         <h2 className="mb-4 text-5xl sm:text-6xl md:text-7xl">{name}</h2>
 
