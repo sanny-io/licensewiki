@@ -5,9 +5,9 @@ import { getAllLicenses, getLicenseBySlug } from '../services/license'
 import { markdownToHtml } from '../services/markdown'
 import Markdown from '../components/Markdown'
 
-export default function License({ name, may, mayNot, must, children, source, slug }) {
+export default function License({ licenses, name, may, mayNot, must, children, source, slug }) {
   return (
-    <HomeLayout>
+    <HomeLayout licenses={licenses} defaultLicenseSearchText={slug}>
       <div className="container px-4 mx-auto">
         <h2 className="mb-4 text-5xl sm:text-6xl md:text-7xl">{name}</h2>
 
@@ -27,6 +27,7 @@ export default function License({ name, may, mayNot, must, children, source, slu
 }
 
 export async function getStaticProps({ params }) {
+  const licenses = getAllLicenses(['name', 'slug'])
   const license = getLicenseBySlug(params.license, [
     'name',
     'may',
@@ -41,6 +42,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       ...license,
+      licenses,
       children: content,
       slug: params.license,
     },

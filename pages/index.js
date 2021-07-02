@@ -4,8 +4,8 @@ import { useRouter } from 'next/router'
 
 const findLicense = (licenses, searchValue) => licenses.find(license => license.slug.toLowerCase() == searchValue.toLowerCase())
 
-export default function Home({ licenses, children }) {
-  const [licenseSearchText, setLicenseSearchText] = useState('')
+export default function Home({ licenses, defaultLicenseSearchText = '', children }) {
+  const [licenseSearchText, setLicenseSearchText] = useState(defaultLicenseSearchText)
   const router = useRouter()
 
   const handleSearchSubmit = e => {
@@ -31,7 +31,7 @@ export default function Home({ licenses, children }) {
       <form onSubmit={handleSearchSubmit} className="flex flex-col text-center py-9 gap-y-3">
         <h1 className="text-6xl sm:text-7xl md:text-8xl">license.wiki</h1>
         <span className="text-2xl text-gray-400">Find the license that works for you.</span>
-        <input type="text" name="license" placeholder="Search licenses" list="licenses" onChange={handleSearchChanged} />
+        <input type="text" name="license" value={licenseSearchText} placeholder="Search licenses" list="licenses" onChange={handleSearchChanged} />
         <datalist id="licenses">
           {
             licenses?.map((license, key) => {
