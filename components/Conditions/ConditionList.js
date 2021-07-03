@@ -11,7 +11,7 @@ export default function ConditionList({ title, children, borderColor = 'border-g
       {
         isEmpty
           ?
-          <div className="text-xl italic text-center text-gray-400">Nothing to show...</div>
+          <div className="text-xl italic text-center text-gray-100">Nothing to show...</div>
           : <ul className="space-y-3">
             {
               children?.map((child, key) => {
