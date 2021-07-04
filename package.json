@@ -2,7 +2,7 @@
   "name": "licensewiki",
   "homepage": "https://license.wiki",
   "version": "1.0.0",
-  "description": "",
+  "description": "Find the license that works for you.",
   "private": true,
   "scripts": {
     "dev": "next dev",
