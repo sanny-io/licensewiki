@@ -27,7 +27,7 @@ export default function Home({ licenses, defaultLicenseSearchText = '', children
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <main className="flex flex-col items-center justify-center">
       <form onSubmit={handleSearchSubmit} className="flex flex-col text-center py-9 gap-y-3">
         <h1 className="text-6xl sm:text-7xl md:text-8xl">license.wiki</h1>
         <span className="text-2xl text-gray-400">Find the license that works for you.</span>
@@ -50,7 +50,7 @@ export default function Home({ licenses, defaultLicenseSearchText = '', children
       </form>
 
       {children}
-    </div>
+    </main>
   )
 }
 

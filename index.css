@@ -4,8 +4,21 @@
 
 @layer base {
   html,
-  body {
-    @apply min-h-screen;
+  body,
+  #__next {
+    @apply h-full;
+  }
+
+  #__next {
+    @apply flex flex-col;
+  }
+
+  #__next > main {
+    @apply flex-grow flex-shrink-0;
+  }
+
+  #__next > footer {
+    @apply flex-shrink-0;
   }
 
   body {
