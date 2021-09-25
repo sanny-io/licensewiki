@@ -8,7 +8,7 @@ import Markdown from '../components/Markdown'
 
 export default function License({ licenses, name, may, mayNot, must, children, source, slug }) {
   return (
-    <HomeLayout licenses={licenses} defaultLicenseSearchText={slug}>
+    <HomeLayout licenses={licenses}>
       <Head>
         <title>{name} - license.wiki</title>
       </Head>
@@ -18,7 +18,7 @@ export default function License({ licenses, name, may, mayNot, must, children, s
 
         <div className="mb-6 space-x-4">
           {source && <a href={source} className="button">Source</a>}
-          <a href={`${process.env.NEXT_PUBLIC_REPO_URL}/blob/${process.env.NEXT_PUBLIC_REPO_DEFAULT_BRANCH}/licenses/${slug}.md`} className="button">Edit on GitHub</a>
+          <a href={`${process.env.NEXT_PUBLIC_REPO_URL}/edit/${process.env.NEXT_PUBLIC_REPO_DEFAULT_BRANCH}/licenses/${slug}.md`} className="button">Edit on GitHub</a>
         </div>
 
         <Markdown>{children}</Markdown>
