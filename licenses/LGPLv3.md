@@ -1,12 +1,11 @@
 ---
-name: MIT License
-source: https://opensource.org/licenses/MIT
+name: GNU LGPLv3
+source: https://www.gnu.org/licenses/lgpl-3.0.en.html
 
 may:
     - useCommercially
     - distribute
     - modify
-    - sublicense
 
 mayNot:
     - holdLiable
@@ -15,5 +14,6 @@ mayNot:
 must:
     - provideCopyright
     - provideLicense
+    - documentChanges
 
 ---

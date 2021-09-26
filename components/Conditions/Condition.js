@@ -6,6 +6,21 @@ const conditionIdMap = {
     description: 'use the software for commercial purposes.',
   },
 
+  usePrivately: {
+    name: 'Use Privately',
+    description: 'use the software in a private manner.',
+  },
+
+  useSameLicense: {
+    name: 'Use Same License',
+    description: 'provide the software under the same (or functionally equivalent) license.',
+  },
+
+  considerNetworkUseAsDistribution: {
+    name: 'Consider Network Use as Distribution',
+    description: 'consider the usage of the software through a network as distribution.',
+  },
+
   distribute: {
     name: 'Distribute',
     description: 'distribute the software.',

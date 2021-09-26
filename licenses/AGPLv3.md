@@ -1,12 +1,11 @@
 ---
-name: MIT License
+name: GNU AGPLv3
 source: https://opensource.org/licenses/MIT
 
 may:
     - useCommercially
     - distribute
     - modify
-    - sublicense
 
 mayNot:
     - holdLiable
@@ -15,5 +14,9 @@ mayNot:
 must:
     - provideCopyright
     - provideLicense
+    - provideSource
+    - useSameLicense
+    - considerNetworkUseAsDistribution
+    - documentChanges
 
 ---

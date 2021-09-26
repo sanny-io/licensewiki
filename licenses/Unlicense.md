@@ -10,4 +10,5 @@ may:
 mayNot:
     - holdLiable
     - expectWarranty
+
 ---

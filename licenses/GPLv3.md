@@ -1,12 +1,11 @@
 ---
-name: MIT License
-source: https://opensource.org/licenses/MIT
+name: GNU GPLv3
+source: https://www.gnu.org/licenses/gpl-3.0.en.html
 
 may:
     - useCommercially
     - distribute
     - modify
-    - sublicense
 
 mayNot:
     - holdLiable
@@ -15,5 +14,7 @@ mayNot:
 must:
     - provideCopyright
     - provideLicense
+    - provideSource
+    - documentChanges
 
 ---

@@ -1,12 +1,11 @@
 ---
-name: MIT License
-source: https://opensource.org/licenses/MIT
+name: Mozilla Public License 2.0
+source: https://www.mozilla.org/en-US/MPL/2.0/
 
 may:
     - useCommercially
     - distribute
     - modify
-    - sublicense
 
 mayNot:
     - holdLiable
@@ -15,5 +14,6 @@ mayNot:
 must:
     - provideCopyright
     - provideLicense
+    - provideSource
 
 ---
